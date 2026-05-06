@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Hardware | Catálogo Premium</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Nexus Hardware</h1>
+        <p class="subtitle">Catálogo de componentes (Listado Estático)</p>
+    </header>
+
+    <main class="container">
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#ID</th>
+                        <th>Componente</th>
+                        <th>Marca</th>
+                        <th>Precio</th>
+                        <th>Disponibilidad</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="id-col">#003</td>
+                        <td class="name-col">RTX 4090</td>
+                        <td><span class="brand-badge">MSI</span></td>
+                        <td class="price-col">$1,599.99</td>
+                        <td>
+                            <div class="stock-indicator">
+                                <div class="dot low-stock"></div>
+                                <span>5 uds.</span>
+                            </div>
+                        </td>
+                        <td><a href="#" onclick="event.preventDefault();" style="color: var(--neon-purple); text-decoration: none; font-weight: 600;">Ver Detalle</a></td>
+                    </tr>
+                    <tr>
+                        <td class="id-col">#002</td>
+                        <td class="name-col">ROG Strix B650</td>
+                        <td><span class="brand-badge">Asus</span></td>
+                        <td class="price-col">$219.50</td>
+                        <td>
+                            <div class="stock-indicator">
+                                <div class="dot in-stock"></div>
+                                <span>12 uds.</span>
+                            </div>
+                        </td>
+                        <td><a href="#" onclick="event.preventDefault();" style="color: var(--neon-purple); text-decoration: none; font-weight: 600;">Ver Detalle</a></td>
+                    </tr>
+                    <tr>
+                        <td class="id-col">#001</td>
+                        <td class="name-col">Vengeance RGB 32GB</td>
+                        <td><span class="brand-badge">Corsair</span></td>
+                        <td class="price-col">$110.00</td>
+                        <td>
+                            <div class="stock-indicator">
+                                <div class="dot in-stock"></div>
+                                <span>30 uds.</span>
+                            </div>
+                        </td>
+                        <td><a href="detalle.html" style="color: var(--neon-purple); text-decoration: none; font-weight: 600;">Ver Detalle</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <a href="#" onclick="event.preventDefault();" class="fab" title="Añadir nuevo componente">+</a>
+
+</body>
+</html>
