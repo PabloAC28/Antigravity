@@ -34,7 +34,9 @@ Sigue estos pasos para configurar el proyecto en tu entorno local:
 ## 🌐 Servidor en Producción
 
 Puedes acceder a la versión desplegada de la aplicación aquí:
-- **URL de Producción:** [http://antigravity.dwes.site](http://antigravity.dwes.site)
+- **URL de Producción:** [http://alumno7.dwes.site](http://alumno7.dwes.site)
+
+**Vídeo de demostración:** [Ver en Loom](https://www.loom.com/share/9c784a37a0374c42ba4efdad90f663a2)
 
 ---
 *Desarrollado para la gestión eficiente de hardware premium.*
