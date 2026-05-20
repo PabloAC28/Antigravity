@@ -2,16 +2,16 @@
 -- Datos de prueba y esquema inicial para la base de datos de Antigravity
 
 CREATE TABLE IF NOT EXISTS marcas (
-    id_marca INTEGER PRIMARY KEY AUTOINCREMENT,
-    nombre TEXT NOT NULL
+    id_marca INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS componentes (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    nombre TEXT NOT NULL,
-    precio REAL NOT NULL,
-    stock INTEGER NOT NULL,
-    id_marca INTEGER NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(150) NOT NULL,
+    precio DECIMAL(10, 2) NOT NULL,
+    stock INT NOT NULL,
+    id_marca INT NOT NULL,
     FOREIGN KEY (id_marca) REFERENCES marcas(id_marca)
 );
 

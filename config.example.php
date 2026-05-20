@@ -8,23 +8,21 @@
  * 2. Personaliza los datos de conexión si fuera necesario (por defecto usa SQLite)
  */
 
-$db_file = __DIR__ . '/database.sqlite';
-$is_new_db = !file_exists($db_file);
+// Configuración de la base de datos MySQL
+$db_host = 'localhost';
+$db_name = 'alumno7'; // Tu nombre de base de datos en el servidor
+$db_user = 'alumno7'; // Tu usuario de MySQL
+$db_pass = 'TU_CONTRASEÑA_AQUÍ'; // Cambia esto por tu contraseña real en el servidor
 
 try {
-    $pdo = new PDO("sqlite:" . $db_file);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // Lógica de inicialización de la base de datos...
-    if ($is_new_db) {
-        // ... (el código real se encargará de crear las tablas)
-    }
+    $dsn = "mysql:host=$db_host;dbname=$db_name;charset=utf8mb4";
+    $options = [
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES   => false,
+    ];
+    $pdo = new PDO($dsn, $db_user, $db_pass, $options);
 } catch (PDOException $e) {
     die("Error de conexión a la base de datos: " . $e->getMessage());
 }
-
-// Ejemplo de otras variables que podrían ser necesarias en el futuro
-// define('APP_URL', 'http://localhost/tu-proyecto');
-// define('ADMIN_USER', 'admin');
-// define('ADMIN_PASS', 'password123');
 ?>
